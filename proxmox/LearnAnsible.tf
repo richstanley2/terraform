@@ -18,7 +18,7 @@ resource "proxmox_vm_qemu" "Ubuntu0" {
     cpu = "host"
     memory = 2048
     name = "Ubuntu0"
-    vmid = 101
+    vmid = 110
 
     # cloudinit = "local-lvm"
     scsihw   = "virtio-scsi-single" 
@@ -74,7 +74,7 @@ resource "proxmox_vm_qemu" "Ubuntu1" {
     cpu = "host"
     memory = 2048
     name = "Ubuntu1"
-    vmid = 102
+    vmid = 111
 
     # cloudinit = "local-lvm"
     scsihw   = "virtio-scsi-single" 
@@ -130,7 +130,7 @@ resource "proxmox_vm_qemu" "Ubuntu2" {
     cpu = "host"
     memory = 2048
     name = "Ubuntu2"
-    vmid = 103
+    vmid = 112
 
     # cloudinit = "local-lvm"
     scsihw   = "virtio-scsi-single" 
@@ -187,7 +187,7 @@ resource "proxmox_vm_qemu" "Rocky0" {
     cpu = "host"
     memory = 2048
     name = "Rocky0"
-    vmid = 104
+    vmid = 113
 
     # cloudinit = "local-lvm"
     scsihw   = "virtio-scsi-single" 
@@ -243,7 +243,7 @@ resource "proxmox_vm_qemu" "Workstation" {
     cpu = "host"
     memory = 2048
     name = "Workstation"
-    vmid = 105
+    vmid = 114
 
     # cloudinit = "local-lvm"
     scsihw   = "virtio-scsi-single" 
