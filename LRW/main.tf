@@ -45,10 +45,10 @@ resource "proxmox_vm_qemu" "ICINGA" {
 
     # Setup the ip address using cloud-init.
     # Keep in mind to use the CIDR notation for the ip.
-    ipconfig0 = "ip=192.168.1.22/24,gw=192.168.1.1"
+    ipconfig0 = "ip=192.168.10.22/24,gw=192.168.10.1"
     ciuser = "rich"
     cipassword = "not2bright"
-    nameserver = "192.168.1.1"
+    nameserver = "192.168.10.10"
     sshkeys = <<EOF
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAgpT9X/oGtbEBxfVwDwXA9x2T4WhstuaB/7KzHH+nc/ rich default
     EOF
@@ -101,10 +101,10 @@ resource "proxmox_vm_qemu" "GRAFANA" {
 
     # Setup the ip address using cloud-init.
     # Keep in mind to use the CIDR notation for the ip.
-    ipconfig0 = "ip=192.168.1.25/24,gw=192.168.1.1"
+    ipconfig0 = "ip=192.168.10.25/24,gw=192.168.10.1"
     ciuser = "rich"
     cipassword = "not2bright"
-    nameserver = "192.168.1.1"
+    nameserver = "192.168.10.10"
     sshkeys = <<EOF
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAgpT9X/oGtbEBxfVwDwXA9x2T4WhstuaB/7KzHH+nc/ rich default
     EOF
@@ -157,10 +157,10 @@ resource "proxmox_vm_qemu" "SYSLOG" {
 
     # Setup the ip address using cloud-init.
     # Keep in mind to use the CIDR notation for the ip.
-    ipconfig0 = "ip=192.168.1.26/24,gw=192.168.1.1"
+    ipconfig0 = "ip=192.168.10.26/24,gw=192.168.10.1"
     ciuser = "rich"
     cipassword = "not2bright"
-    nameserver = "192.168.1.1"
+    nameserver = "192.168.10.10"
     sshkeys = <<EOF
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAgpT9X/oGtbEBxfVwDwXA9x2T4WhstuaB/7KzHH+nc/ rich default
     EOF
