@@ -16,7 +16,7 @@ resource "proxmox_vm_qemu" "ICINGA" {
     sockets = 1
     vcpus = 0
     cpu = "host"
-    memory = 2048
+    memory = 3072
     name = "ICINGA"
     vmid = 203
 
@@ -72,7 +72,7 @@ resource "proxmox_vm_qemu" "GRAFANA" {
     sockets = 1
     vcpus = 0
     cpu = "host"
-    memory = 2048
+    memory = 3072
     name = "GRAFANA"
     vmid = 204
 
@@ -128,7 +128,7 @@ resource "proxmox_vm_qemu" "SYSLOG" {
     sockets = 1
     vcpus = 0
     cpu = "host"
-    memory = 2048
+    memory = 3072
     name = "SYSLOG"
     vmid = 205
 
