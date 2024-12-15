@@ -180,7 +180,7 @@ resource "proxmox_vm_qemu" "DOCKER" {
     agent = 1
 
     os_type = "cloud-init"
-    cores = 2
+    cores = 4
     sockets = 2
     vcpus = 0
     cpu = "host"
