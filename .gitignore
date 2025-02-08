@@ -1,0 +1,7 @@
+local/.terraform.lock.hcl
+local/terraform.tfstate
+local/terraform.tfstate.backup
+local/.terraform/providers/registry.terraform.io/telmate/proxmox/3.0.1-rc3/linux_amd64/LICENSE
+local/.terraform/providers/registry.terraform.io/telmate/proxmox/3.0.1-rc3/linux_amd64/README.md
+LRW/terraform.tfstate
+LRW/terraform.tfstate
