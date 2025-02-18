@@ -13,7 +13,7 @@ resource "proxmox_vm_qemu" "NS1" {
 
     os_type = "cloud-init"
     cores = 4
-    sockets = 1
+    sockets = 2
     vcpus = 0
     cpu = "host"
     memory = 2048
@@ -45,10 +45,10 @@ resource "proxmox_vm_qemu" "NS1" {
 
     # Setup the ip address using cloud-init.
     # Keep in mind to use the CIDR notation for the ip.
-    ipconfig0 = "ip=192.168.10.10/24,gw=192.168.10.1"
+    ipconfig0 = "ip=192.168.1.10/24,gw=192.168.1.1"
     ciuser = "rich"
     cipassword = "not2bright"
-    nameserver = "192.168.10.10"
+    nameserver = "192.168.1.10"
     sshkeys = <<EOF
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAgpT9X/oGtbEBxfVwDwXA9x2T4WhstuaB/7KzHH+nc/ rich default
     EOF
@@ -69,7 +69,7 @@ resource "proxmox_vm_qemu" "NS2" {
 
     os_type = "cloud-init"
     cores = 4
-    sockets = 1
+    sockets = 2
     vcpus = 0
     cpu = "host"
     memory = 2048
@@ -101,10 +101,10 @@ resource "proxmox_vm_qemu" "NS2" {
 
     # Setup the ip address using cloud-init.
     # Keep in mind to use the CIDR notation for the ip.
-    ipconfig0 = "ip=192.168.10.11/24,gw=192.168.10.1"
+    ipconfig0 = "ip=192.168.1.11/24,gw=192.168.1.1"
     ciuser = "rich"
     cipassword = "not2bright"
-    nameserver = "192.168.10.10"
+    nameserver = "192.168.1.10"
     sshkeys = <<EOF
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAgpT9X/oGtbEBxfVwDwXA9x2T4WhstuaB/7KzHH+nc/ rich default
     EOF

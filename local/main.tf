@@ -45,10 +45,10 @@ resource "proxmox_vm_qemu" "DOCKER" {
 
     # Setup the ip address using cloud-init.
     # Keep in mind to use the CIDR notation for the ip.
-    ipconfig0 = "ip=192.168.1.29/24,gw=192.168.1.1"
+    ipconfig0 = "ip=192.168.1.28/24,gw=192.168.1.1"
     ciuser = "rich"
     cipassword = "not2bright"
-    nameserver = "192.168.1.1"
+    nameserver = "192.168.1.10"
     sshkeys = <<EOF
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAgpT9X/oGtbEBxfVwDwXA9x2T4WhstuaB/7KzHH+nc/ rich default
     EOF
@@ -101,15 +101,16 @@ resource "proxmox_vm_qemu" "DOCKER1" {
 
     # Setup the ip address using cloud-init.
     # Keep in mind to use the CIDR notation for the ip.
-    ipconfig0 = "ip=192.168.1.28/24,gw=192.168.1.1"
+    ipconfig0 = "ip=192.168.1.29/24,gw=192.168.1.1"
     ciuser = "rich"
     cipassword = "not2bright"
-    nameserver = "192.168.1.1"
+    nameserver = "192.168.1.10"
     sshkeys = <<EOF
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAgpT9X/oGtbEBxfVwDwXA9x2T4WhstuaB/7KzHH+nc/ rich default
     EOF
 }
 
+/*
 
 resource "proxmox_vm_qemu" "NS1" {
     # Node name has to be the same name as within the cluster
@@ -223,6 +224,7 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAgpT9X/oGtbEBxfVwDwXA9x2T4WhstuaB/7KzHH+nc/
     EOF
 }
 
+*/
 
 resource "proxmox_vm_qemu" "ICINGA" {
     # Node name has to be the same name as within the cluster

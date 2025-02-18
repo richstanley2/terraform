@@ -5,3 +5,5 @@ local/.terraform/providers/registry.terraform.io/telmate/proxmox/3.0.1-rc3/linux
 local/.terraform/providers/registry.terraform.io/telmate/proxmox/3.0.1-rc3/linux_amd64/README.md
 LRW/terraform.tfstate
 LRW/terraform.tfstate
+DNS/terraform.tfstate
+DNS/terraform.tfstate.backup
