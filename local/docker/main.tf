@@ -1,7 +1,7 @@
 resource "proxmox_vm_qemu" "DOCKER" {
     # Node name has to be the same name as within the cluster
     # this might not include the FQDN
-    target_node = "proxmox"
+    target_node = "proxmox1"
     desc = "DOCKER"
     onboot = true
 
@@ -13,7 +13,7 @@ resource "proxmox_vm_qemu" "DOCKER" {
 
     os_type = "cloud-init"
     cores = 4
-    sockets = 2
+    sockets = 1
     vcpus = 0
     cpu = "host"
     memory = 4096
