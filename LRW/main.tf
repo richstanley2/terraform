@@ -1,3 +1,6 @@
+
+/*
+
 resource "proxmox_vm_qemu" "HESK" {
     # Node name has to be the same name as within the cluster
     # this might not include the FQDN
@@ -110,6 +113,8 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAgpT9X/oGtbEBxfVwDwXA9x2T4WhstuaB/7KzHH+nc/
     EOF
 }
 
+*/
+
 resource "proxmox_vm_qemu" "ICINGA" {
     # Node name has to be the same name as within the cluster
     # this might not include the FQDN
@@ -160,11 +165,13 @@ resource "proxmox_vm_qemu" "ICINGA" {
     ipconfig0 = "ip=192.168.1.22/24,gw=192.168.1.1"
     ciuser = "rich"
     cipassword = "not2bright"
-    nameserver = "192.168.1.1"
+    nameserver = "192.168.1.10"
     sshkeys = <<EOF
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAgpT9X/oGtbEBxfVwDwXA9x2T4WhstuaB/7KzHH+nc/ rich default
     EOF
 }
+
+/*
 
 resource "proxmox_vm_qemu" "GRAFANA" {
     # Node name has to be the same name as within the cluster
@@ -277,3 +284,5 @@ resource "proxmox_vm_qemu" "SYSLOG" {
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAgpT9X/oGtbEBxfVwDwXA9x2T4WhstuaB/7KzHH+nc/ rich default
     EOF
 }
+
+*/
