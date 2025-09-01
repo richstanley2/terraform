@@ -47,9 +47,7 @@ resource "proxmox_vm_qemu" "MAIL" {
     # Keep in mind to use the CIDR notation for the ip.
     ipconfig0 = "ip=192.168.1.30/24,gw=192.168.1.1"
     ciuser = "rich"
-    cipassword = "not2bright"
+    cipassword = "THEPASSWORD"
     nameserver = "192.168.1.1"
-    sshkeys = <<EOF
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAgpT9X/oGtbEBxfVwDwXA9x2T4WhstuaB/7KzHH+nc/ rich default
-    EOF
+    sshkeys = THESSHKEY
 }
